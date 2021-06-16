@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#0676FF</color>
+    <color name="colorPrimary">#FBFBFB</color>
+<!--    <color name="colorPrimaryDark">#E2E5EB</color>-->
+    <color name="colorPrimaryDark">#3C7BA6</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteTransparent">#66ffffff</color>
+    <color name="colorWhiteTransparentLight">#99ffffff</color>
+    <color name="colorWhiteOff">#9F9797</color>
+    <color name="colorWhiteOff1">#857B7B</color>
+    <color name="colorGreen">#21C379</color>
+    <color name="colorGray">#cccccc</color>
+    <color name="colorBlackTransparentDark">#cc000000</color>
+    <color name="colorBlackTransparent">#99000000</color>
+    <color name="colorBlackTransparentLight">#66000000</color>
+    <color name="colorBlackTransparentLight1">#44000000</color>
+    <color name="colorGrayLight">#f7f7f7</color>
+    <color name="colorBlue">#6699ff</color>
+    <color name="colorRed">#FF0606</color>
+
+<!--    <color name="colorBlue100">#BBDEFB</color>-->
+    <color name="colorBlueLight">#3C7BA6</color>
+    <color name="colorBlue300">#387FAD</color>
+    <color name="colorBlue600">#276691</color>
+    <color name="colorBlue900">#1D537F</color>
+
+    <color name="colorPurple100">#E1BEE7</color>
+    <color name="colorPurple300">#BA68C8</color>
+    <color name="colorPurple600">#8E24AA</color>
+    <color name="colorYellow">#FFCF4E</color>
+    <color name="colorGrayDark">#B3B3B3</color>
+</resources>

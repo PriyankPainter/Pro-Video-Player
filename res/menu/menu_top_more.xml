@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom" />-->
+
+    <item
+        android:id="@+id/actionLastPlay"
+        android:title="@string/action_last_play"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/actionSelect"
+        android:title="@string/action_select"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionViewAs"
+        android:title="@string/action_view_as"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/actionList"
+                android:title="@string/action_list" />
+
+            <item
+                android:id="@+id/actionGrid"
+                android:title="@string/action_grid" />
+
+            <item
+                android:id="@+id/actionFullTitle"
+                android:title="@string/action_full_title" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/actionSortBy"
+        android:title="@string/action_sort_by"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/actionName"
+                android:title="@string/action_name" />
+
+            <item
+                android:id="@+id/actionSize"
+                android:title="@string/action_size" />
+
+            <item
+                android:id="@+id/actionDuration"
+                android:title="@string/action_duration"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/actionAmount"
+                android:title="@string/action_Amount"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/actionDate"
+                android:title="@string/action_date"
+                app:showAsAction="never">
+                <menu>
+                    <item
+                        android:id="@+id/actionNewToOld"
+                        android:title="@string/action_new_to_old" />
+
+                    <item
+                        android:id="@+id/actionOldToNew"
+                        android:title="@string/action_old_to_new" />
+                </menu>
+            </item>
+
+            <item
+                android:id="@+id/actionReverseAll"
+                android:title="@string/actopn_reverse_all" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/actionRefresh"
+        android:title="@string/action_refresh"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionRemoveAll"
+        android:title="@string/action_remove_all"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionSetting"
+        android:title="@string/action_setting"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="always" />
+</menu>

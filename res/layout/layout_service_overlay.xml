@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagebutton_stroke_border"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <VideoView
+                android:id="@+id/vvVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/fsSeekbar"
+            style="@style/Widget.AppCompat.SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="-17dp"
+            android:layout_marginEnd="-17dp"
+            android:background="@color/colorWhite"
+            android:progress="50"
+            android:progressBackgroundTint="@color/colorWhite"
+            android:progressTint="@color/colorAccent"
+            android:splitTrack="false"
+            android:thumb="@null"
+            android:thumbTint="@color/colorAccent" />
+        <!--            android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@id/vvVideo"-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTopControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_black_transparent_top_shade"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvSongName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="Video lable"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_close_24dp"
+            app:tint="@color/colorWhite"
+            android:background="@drawable/bg_rounded_black_transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCenterControlls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivPrev"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/bg_rounded_black_transparent"
+            android:contentDescription="songName"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_prev" />
+
+        <ImageView
+            android:id="@+id/ivPlayPause"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/bg_rounded_black_transparent"
+            android:contentDescription="albumName"
+            android:src="@drawable/ic_pause" />
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:background="@drawable/bg_rounded_black_transparent"
+            android:contentDescription="Next"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_next" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/bg_rounded_black_transparent">
+
+            <ImageView
+                android:id="@+id/ivOpenPlayer"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_open_player"
+                app:tint="@color/colorWhite" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <LinearLayout
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/bg_rounded_black_transparent">
+
+            <ImageView
+                android:id="@+id/ivResize"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/resize"
+                app:tint="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+
+    </RelativeLayout></FrameLayout></LinearLayout>

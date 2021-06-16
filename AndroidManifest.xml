@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prolific.vidmediaplayer">
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <!--<uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission
+        android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="android.permission.WRITE_SETTINGS"
+        android:protectionLevel="dangerous|signatureOrSystem" />
+
+    <application
+        android:name=".Services.AppClass"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,InnerclassSeparator,UnusedAttribute">
+        <activity
+            android:name=".Activities.PermissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.StartingActivity"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AudioClasses.PlayingAudioActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.SearchActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.InsideVideos"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activities.VideoPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            tools:ignore="InnerclassSeparator">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="video/*" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+
+        <service
+            android:name=".AudioClasses.AudioSongService"
+            android:enabled="true"
+            tools:ignore="InnerclassSeparator" />
+        <service
+            android:name=".AudioClasses.PlayingAudioService"
+            tools:ignore="InnerclassSeparator" />
+        <service
+            android:name=".Services.BackgroundPlay"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".Services.FloatService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".BroadcastReceiverForAudio.PauseAndPlayBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiverForAudio.NextSongBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiverForAudio.PreviousSongBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiverForAudio.CloseNotificationAudio"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiverForAudio.AudioNotificationClickBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiversForVideo.PauseAndPlayVideoBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiversForVideo.NextVideoBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiversForVideo.PreviousVideoBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiversForVideo.CloseNotificationBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver
+            android:name=".BroadcastReceiversForVideo.NotificationClickBroadcast"
+            tools:ignore="InnerclassSeparator" />
+        <receiver android:name=".Activities.VideoPlayerActivity$MyBroadCastReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_unit_id" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
